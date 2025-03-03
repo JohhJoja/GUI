@@ -6,7 +6,7 @@ public class My_Frame extends JFrame {
     My_Frame(){
 
         setVisible(true);
-        setSize(400,400);
+        setSize(500,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("My frame!");
        // ImageIcon img = new ImageIcon("");
@@ -28,10 +28,18 @@ public class My_Frame extends JFrame {
 //        label.setVerticalAlignment(JLabel.CENTER);
        // label.setBounds(0,0,250,250);
 
-       // setLayout(null);
   //      add(label);
 
-        
+//        setLayout(null);
+//
+//        JPanel panel = new JPanel();
+//        panel.setBackground(Color.GREEN);
+//        panel.setBounds(0,0,150,150);
+//        panel.add(new JLabel("Hello"));
+//
+//        add(panel);
+
+
 
     }
 }
