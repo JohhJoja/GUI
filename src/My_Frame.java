@@ -7,11 +7,12 @@ public class My_Frame extends JFrame{
 
     JButton button;
     JTextField textField;
+    JCheckBox checkbox;
 
     My_Frame(){
 
         setVisible(true);
-        setSize(500,500);
+        setSize(300,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("My frame!");
        // ImageIcon img = new ImageIcon("");
@@ -20,6 +21,13 @@ public class My_Frame extends JFrame{
 
         setLayout(new FlowLayout());
 
+//        checkbox = new JCheckBox("Check: ");
+//        checkbox.setHorizontalTextPosition(JCheckBox.LEFT);
+//
+//        button = new JButton("Submit");
+//        button.addActionListener(this);
+//        add(checkbox);
+//        add(button);
 //        textField = new JTextField();
 //        textField.setPreferredSize(new Dimension(250,40));
 //
@@ -149,4 +157,10 @@ public class My_Frame extends JFrame{
     }
 
 
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//        if (e.getSource()==button){
+//            System.out.println(checkbox.isSelected()? "yes": "no");
+//        }
+//    }
 }
