@@ -17,7 +17,7 @@ public class My_Frame extends JFrame  {
        // setIconImage(img);
         getContentPane().setBackground(Color.CYAN);
 
-        setLayout(new FlowLayout(FlowLayout.LEADING,10,10));
+        setLayout(new GridLayout(3,3,5,5));
 
         add(new JButton("1"));
         add(new JButton("2"));
@@ -28,7 +28,20 @@ public class My_Frame extends JFrame  {
         add(new JButton("7"));
         add(new JButton("8"));
         add(new JButton("9"));
-        add(new JButton("10"));
+
+
+//        setLayout(new FlowLayout(FlowLayout.LEADING,10,10));
+//
+//        add(new JButton("1"));
+//        add(new JButton("2"));
+//        add(new JButton("3"));
+//        add(new JButton("4"));
+//        add(new JButton("5"));
+//        add(new JButton("6"));
+//        add(new JButton("7"));
+//        add(new JButton("8"));
+//        add(new JButton("9"));
+//        add(new JButton("10"));
 
 //        JPanel panel1 = new JPanel();
 //        JPanel panel2 = new JPanel();
