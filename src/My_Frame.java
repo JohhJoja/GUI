@@ -17,33 +17,44 @@ public class My_Frame extends JFrame  {
        // setIconImage(img);
         getContentPane().setBackground(Color.CYAN);
 
-        setLayout(new BorderLayout());
+        setLayout(new FlowLayout(FlowLayout.LEADING,10,10));
 
-        JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
-        JPanel panel3 = new JPanel();
-        JPanel panel4 = new JPanel();
-        JPanel panel5 = new JPanel();
+        add(new JButton("1"));
+        add(new JButton("2"));
+        add(new JButton("3"));
+        add(new JButton("4"));
+        add(new JButton("5"));
+        add(new JButton("6"));
+        add(new JButton("7"));
+        add(new JButton("8"));
+        add(new JButton("9"));
+        add(new JButton("10"));
 
-        panel1.setBackground(Color.RED);
-        panel2.setBackground(Color.green);
-        panel3.setBackground(Color.orange);
-        panel4.setBackground(Color.yellow);
-        panel5.setBackground(Color.blue);
+//        JPanel panel1 = new JPanel();
+//        JPanel panel2 = new JPanel();
+//        JPanel panel3 = new JPanel();
+//        JPanel panel4 = new JPanel();
+//        JPanel panel5 = new JPanel();
+//
+//        panel1.setBackground(Color.RED);
+//        panel2.setBackground(Color.green);
+//        panel3.setBackground(Color.orange);
+//        panel4.setBackground(Color.yellow);
+//        panel5.setBackground(Color.blue);
+//
+//        panel1.setPreferredSize(new Dimension(100,100));
+//        panel2.setPreferredSize(new Dimension(100,100));
+//        panel3.setPreferredSize(new Dimension(100,100));
+//        panel4.setPreferredSize(new Dimension(100,100));
+//        panel5.setPreferredSize(new Dimension(100,100));
+//
+//        add(panel1, BorderLayout.WEST);
+//        add(panel2, BorderLayout.EAST);
+//        add(panel3, BorderLayout.SOUTH);
+//        add(panel4, BorderLayout.CENTER);
+//        add(panel5, BorderLayout.NORTH);
 
-        panel1.setPreferredSize(new Dimension(100,100));
-        panel2.setPreferredSize(new Dimension(100,100));
-        panel3.setPreferredSize(new Dimension(100,100));
-        panel4.setPreferredSize(new Dimension(100,100));
-        panel5.setPreferredSize(new Dimension(100,100));
 
-        add(panel1, BorderLayout.WEST);
-        add(panel2, BorderLayout.EAST);
-        add(panel3, BorderLayout.SOUTH);
-        add(panel4, BorderLayout.CENTER);
-        add(panel5, BorderLayout.NORTH);
-
-        
 //        JLabel label = new JLabel("Bro, darova");
 //        ImageIcon img = new ImageIcon("");
 //        label.setIcon(img);
