@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class My_Frame extends JFrame implements ActionListener{
 
@@ -14,6 +15,7 @@ public class My_Frame extends JFrame implements ActionListener{
     JComboBox combo;
     JPanel panel;
     JSlider slider;
+    JFileChooser fileChooser;
 
 
 
@@ -201,33 +203,38 @@ public class My_Frame extends JFrame implements ActionListener{
 //
 //        add(slider);
 
-        JMenuBar bar = new JMenuBar();
-        JMenu fileMenu = new JMenu("File");
-        JMenu editMenu = new JMenu("Edit");
-        JMenu helpMenu = new JMenu("Help");
+//        JMenuBar bar = new JMenuBar();
+//        JMenu fileMenu = new JMenu("File");
+//        JMenu editMenu = new JMenu("Edit");
+//        JMenu helpMenu = new JMenu("Help");
+//
+//        JMenuItem loadItem = new JMenuItem("Load");
+//        loadItem.addActionListener(this);
+//        JMenuItem saveItem = new JMenuItem("Save");
+//        saveItem.addActionListener(this);
+//        JMenuItem exitItem = new JMenuItem("Exit");
+//        exitItem.addActionListener(this);
+//
+//        fileMenu.add(loadItem);
+//        fileMenu.add(saveItem);
+//        fileMenu.add(exitItem);
+//
+//        bar.add(fileMenu);
+//        bar.add(editMenu);
+//        bar.add(helpMenu);
+//        setJMenuBar(bar);
 
-        JMenuItem loadItem = new JMenuItem("Load");
-        loadItem.addActionListener(this);
-        JMenuItem saveItem = new JMenuItem("Save");
-        saveItem.addActionListener(this);
-        JMenuItem exitItem = new JMenuItem("Exit");
-        exitItem.addActionListener(this);
+        fileChooser = new JFileChooser();
 
-        fileMenu.add(loadItem);
-        fileMenu.add(saveItem);
-        fileMenu.add(exitItem);
-
-        bar.add(fileMenu);
-        bar.add(editMenu);
-        bar.add(helpMenu);
-        setJMenuBar(bar);
+        add(fileChooser);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button){
-            System.out.println(slider.getValue());
+            System.out.println(fileChooser.showOpenDialog(null));
+            File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
         }
     }
 }
