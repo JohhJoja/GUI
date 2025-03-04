@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class My_Frame extends JFrame {
+public class My_Frame extends JFrame implements ActionListener {
+
+    JButton button;
 
     My_Frame(){
 
@@ -30,7 +34,7 @@ public class My_Frame extends JFrame {
 
   //      add(label);
 
-//        setLayout(null);
+        setLayout(null);
 //
 //        JPanel panel = new JPanel();
 //        panel.setBackground(Color.GREEN);
@@ -39,7 +43,21 @@ public class My_Frame extends JFrame {
 //
 //        add(panel);
 
+        button = new JButton("Click!");
+        button.setBounds(200,100,100,50);
+        button.addActionListener(this);
+        button.setFocusable(false);
+        button.setBackground(Color.magenta);
+        button.setBorder(BorderFactory.createLineBorder(Color.GREEN, 2));
 
+        add(button);
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==button){
+            System.out.println("Click!");
+            button.setEnabled(false);
+        }
     }
 }
