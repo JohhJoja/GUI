@@ -3,20 +3,25 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class My_Frame extends JFrame{
+public class My_Frame extends JFrame implements ActionListener{
 
     JButton button;
     JTextField textField;
     JCheckBox checkbox;
+    JRadioButton pizzaButton;
+    JRadioButton hamburgerButton;
+    JRadioButton hotdogButton;
 
-    My_Frame(){
+
+
+    My_Frame() {
 
         setVisible(true);
-        setSize(300,300);
+        setSize(300, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("My frame!");
-       // ImageIcon img = new ImageIcon("");
-       // setIconImage(img);
+        // ImageIcon img = new ImageIcon("");
+        // setIconImage(img);
         getContentPane().setBackground(Color.CYAN);
 
         setLayout(new FlowLayout());
@@ -124,11 +129,11 @@ public class My_Frame extends JFrame{
 //        label.setBorder(BorderFactory.createLineBorder(Color.BLUE, 10));
 //        label.setHorizontalAlignment(JLabel.CENTER);
 //        label.setVerticalAlignment(JLabel.CENTER);
-       // label.setBounds(0,0,250,250);
+        // label.setBounds(0,0,250,250);
 
-  //      add(label);
+        //      add(label);
 
-    //    setLayout(null);
+        //    setLayout(null);
 //
 //        JPanel panel = new JPanel();
 //        panel.setBackground(Color.GREEN);
@@ -154,8 +159,6 @@ public class My_Frame extends JFrame{
 //            button.setEnabled(false);
 //        }
 
-    }
-
 
 //    @Override
 //    public void actionPerformed(ActionEvent e) {
@@ -163,4 +166,33 @@ public class My_Frame extends JFrame{
 //            System.out.println(checkbox.isSelected()? "yes": "no");
 //        }
 //    }
+
+
+        pizzaButton = new JRadioButton();
+        hamburgerButton = new JRadioButton();
+        hotdogButton = new JRadioButton();
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(pizzaButton);
+        group.add(hamburgerButton);
+        group.add(hotdogButton);
+
+        add(pizzaButton);
+        add(hamburgerButton);
+        add(hotdogButton);
+
+        button = new JButton("Click!");
+        button.addActionListener(this);
+
+        add(button);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==button){
+            System.out.println(
+                    pizzaButton.isSelected()? "pizza":
+                    hamburgerButton.isSelected()? "hamburger": "hotdog!");
+        }
+    }
 }
