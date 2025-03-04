@@ -11,6 +11,7 @@ public class My_Frame extends JFrame implements ActionListener{
     JRadioButton pizzaButton;
     JRadioButton hamburgerButton;
     JRadioButton hotdogButton;
+    JComboBox combo;
 
 
 
@@ -168,31 +169,33 @@ public class My_Frame extends JFrame implements ActionListener{
 //    }
 
 
-        pizzaButton = new JRadioButton();
-        hamburgerButton = new JRadioButton();
-        hotdogButton = new JRadioButton();
+//        pizzaButton = new JRadioButton();
+//        hamburgerButton = new JRadioButton();
+//        hotdogButton = new JRadioButton();
+//
+//        ButtonGroup group = new ButtonGroup();
+//        group.add(pizzaButton);
+//        group.add(hamburgerButton);
+//        group.add(hotdogButton);
+//
+//        add(pizzaButton);
+//        add(hamburgerButton);
+//        add(hotdogButton);
 
-        ButtonGroup group = new ButtonGroup();
-        group.add(pizzaButton);
-        group.add(hamburgerButton);
-        group.add(hotdogButton);
-
-        add(pizzaButton);
-        add(hamburgerButton);
-        add(hotdogButton);
+        String[] animals = {"dog","cat","bird"};
+        combo = new JComboBox(animals);
 
         button = new JButton("Click!");
         button.addActionListener(this);
 
         add(button);
+        add(combo);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button){
-            System.out.println(
-                    pizzaButton.isSelected()? "pizza":
-                    hamburgerButton.isSelected()? "hamburger": "hotdog!");
+            System.out.println(combo.getSelectedItem());
         }
     }
 }
