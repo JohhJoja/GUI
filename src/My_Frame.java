@@ -3,9 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class My_Frame extends JFrame  {
+public class My_Frame extends JFrame{
 
     JButton button;
+    JTextField textField;
 
     My_Frame(){
 
@@ -17,34 +18,42 @@ public class My_Frame extends JFrame  {
        // setIconImage(img);
         getContentPane().setBackground(Color.CYAN);
 
-        setLayout(new GridLayout(3,3,5,5));
+        setLayout(new FlowLayout());
 
-        JLabel label1 = new JLabel();
-        label1.setOpaque(true);
-        label1.setBackground(Color.red);
-        label1.setBounds(50,50,200,200);
-
-        JLabel label2 = new JLabel();
-        label2.setOpaque(true);
-        label2.setBackground(Color.green);
-        label2.setBounds(100,100,200,200);
-
-        JLabel label3 = new JLabel();
-        label3.setOpaque(true);
-        label3.setBackground(Color.blue);
-        label3.setBounds(150,150,200,200);
-
-        JLayeredPane pane1 = new JLayeredPane();
-        pane1.setBounds(0,0,500,500);
-
-        pane1.add(label1, JLayeredPane.DEFAULT_LAYER);
-        pane1.add(label2, JLayeredPane.DEFAULT_LAYER);
-        pane1.add(label3, JLayeredPane.DRAG_LAYER);
-
-        setLayout(null);
-
-
-        add(pane1);
+//        textField = new JTextField();
+//        textField.setPreferredSize(new Dimension(250,40));
+//
+//        button = new JButton("Click!");
+//        button.addActionListener(this);
+//
+//        add(textField);
+//        add(button);
+//        JLabel label1 = new JLabel();
+//        label1.setOpaque(true);
+//        label1.setBackground(Color.red);
+//        label1.setBounds(50,50,200,200);
+//
+//        JLabel label2 = new JLabel();
+//        label2.setOpaque(true);
+//        label2.setBackground(Color.green);
+//        label2.setBounds(100,100,200,200);
+//
+//        JLabel label3 = new JLabel();
+//        label3.setOpaque(true);
+//        label3.setBackground(Color.blue);
+//        label3.setBounds(150,150,200,200);
+//
+//        JLayeredPane pane1 = new JLayeredPane();
+//        pane1.setBounds(0,0,500,500);
+//
+//        pane1.add(label1, JLayeredPane.DEFAULT_LAYER);
+//        pane1.add(label2, JLayeredPane.DEFAULT_LAYER);
+//        pane1.add(label3, JLayeredPane.DRAG_LAYER);
+//
+//        setLayout(null);
+//
+//
+//        add(pane1);
 
 //        add(new JButton("1"));
 //        add(new JButton("2"));
@@ -137,7 +146,7 @@ public class My_Frame extends JFrame  {
 //            button.setEnabled(false);
 //        }
 
-
-
     }
+
+
 }
