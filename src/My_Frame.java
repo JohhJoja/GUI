@@ -12,6 +12,8 @@ public class My_Frame extends JFrame implements ActionListener{
     JRadioButton hamburgerButton;
     JRadioButton hotdogButton;
     JComboBox combo;
+    JPanel panel;
+    JSlider slider;
 
 
 
@@ -181,21 +183,29 @@ public class My_Frame extends JFrame implements ActionListener{
 //        add(pizzaButton);
 //        add(hamburgerButton);
 //        add(hotdogButton);
+//
+//        String[] animals = {"dog","cat","bird"};
+//        combo = new JComboBox(animals);
 
-        String[] animals = {"dog","cat","bird"};
-        combo = new JComboBox(animals);
 
         button = new JButton("Click!");
         button.addActionListener(this);
 
         add(button);
-        add(combo);
+      //  add(combo);
+
+
+        slider = new JSlider(0,100,50);
+        slider.setPreferredSize(new Dimension(400,20));
+
+        add(slider);
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button){
-            System.out.println(combo.getSelectedItem());
+            System.out.println(slider.getValue());
         }
     }
 }
