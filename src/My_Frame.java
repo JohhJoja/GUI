@@ -224,17 +224,18 @@ public class My_Frame extends JFrame implements ActionListener{
 //        bar.add(helpMenu);
 //        setJMenuBar(bar);
 
-        fileChooser = new JFileChooser();
-
-        add(fileChooser);
-
+//        fileChooser = new JFileChooser();
+//
+//        add(fileChooser);
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==button){
-            System.out.println(fileChooser.showOpenDialog(null));
-            File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+            JColorChooser color = new JColorChooser();
+            Color color1 = JColorChooser.showDialog(null,"", Color.BLACK);
+            System.out.println(color1);
         }
     }
 }
