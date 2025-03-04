@@ -195,10 +195,32 @@ public class My_Frame extends JFrame implements ActionListener{
       //  add(combo);
 
 
-        slider = new JSlider(0,100,50);
-        slider.setPreferredSize(new Dimension(400,20));
+//        slider = new JSlider(0,100,50);
+//        slider.setPreferredSize(new Dimension(400,20));
+//        slider.setOrientation(SwingConstants.VERTICAL);
+//
+//        add(slider);
 
-        add(slider);
+        JMenuBar bar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+        JMenu editMenu = new JMenu("Edit");
+        JMenu helpMenu = new JMenu("Help");
+
+        JMenuItem loadItem = new JMenuItem("Load");
+        loadItem.addActionListener(this);
+        JMenuItem saveItem = new JMenuItem("Save");
+        saveItem.addActionListener(this);
+        JMenuItem exitItem = new JMenuItem("Exit");
+        exitItem.addActionListener(this);
+
+        fileMenu.add(loadItem);
+        fileMenu.add(saveItem);
+        fileMenu.add(exitItem);
+
+        bar.add(fileMenu);
+        bar.add(editMenu);
+        bar.add(helpMenu);
+        setJMenuBar(bar);
 
     }
 
