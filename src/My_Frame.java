@@ -19,16 +19,42 @@ public class My_Frame extends JFrame  {
 
         setLayout(new GridLayout(3,3,5,5));
 
-        add(new JButton("1"));
-        add(new JButton("2"));
-        add(new JButton("3"));
-        add(new JButton("4"));
-        add(new JButton("5"));
-        add(new JButton("6"));
-        add(new JButton("7"));
-        add(new JButton("8"));
-        add(new JButton("9"));
+        JLabel label1 = new JLabel();
+        label1.setOpaque(true);
+        label1.setBackground(Color.red);
+        label1.setBounds(50,50,200,200);
 
+        JLabel label2 = new JLabel();
+        label2.setOpaque(true);
+        label2.setBackground(Color.green);
+        label2.setBounds(100,100,200,200);
+
+        JLabel label3 = new JLabel();
+        label3.setOpaque(true);
+        label3.setBackground(Color.blue);
+        label3.setBounds(150,150,200,200);
+
+        JLayeredPane pane1 = new JLayeredPane();
+        pane1.setBounds(0,0,500,500);
+
+        pane1.add(label1, JLayeredPane.DEFAULT_LAYER);
+        pane1.add(label2, JLayeredPane.DEFAULT_LAYER);
+        pane1.add(label3, JLayeredPane.DRAG_LAYER);
+
+        setLayout(null);
+
+
+        add(pane1);
+
+//        add(new JButton("1"));
+//        add(new JButton("2"));
+//        add(new JButton("3"));
+//        add(new JButton("4"));
+//        add(new JButton("5"));
+//        add(new JButton("6"));
+//        add(new JButton("7"));
+//        add(new JButton("8"));
+//        add(new JButton("9"));
 
 //        setLayout(new FlowLayout(FlowLayout.LEADING,10,10));
 //
