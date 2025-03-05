@@ -18,7 +18,6 @@ public class My_Frame extends JFrame implements ActionListener{
     JFileChooser fileChooser;
 
 
-
     My_Frame() {
 
         setVisible(true);
@@ -227,7 +226,7 @@ public class My_Frame extends JFrame implements ActionListener{
 //        fileChooser = new JFileChooser();
 //
 //        add(fileChooser);
-        
+
     }
 
     @Override
