@@ -2,7 +2,8 @@ public class Main {
     public static void main(String[] args) {
 
         //new My_Frame();
-        new KeyEvents();
+       // new KeyEvents();
+        new MouseListeners();
 
     }
 }
